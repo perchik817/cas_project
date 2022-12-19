@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<link rel="stylesheet" href="{% static 'css/order.css' %}">
+	<title>Orders</title>
+</head>
+<body style="background-image: url('../static/images/backgr.webp'); background-size:contain; ">
+{% include "header.html" %}
+<section>
+	{% for i in order %}
+	<section class="section_inner">
+		<div class="hr"><hr></div>
+		<h1>Заказ клиента: {{i.first_name}}</h1>
+		<p>Колличество: {{i.quantity}}</p>
+		<p>Email: {{i.email}}</p>
+		<p>Адрес : {{i.address}}</p>
+		<p>Номер клиента: {{i.phone_number}}</p>
+		<p>Date: {{i.created}}</p>
+		<div class="hr"><hr></div>
+	</section>
+	{% endfor %}
+</section>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us</title>
+    <link rel="stylesheet" href="{% static 'css/about_us.css' %}">
+  </head>
+  <body style="background-image: url('../static/images/back_sign_up.webp');  background-size: cover; background-repeat: no-repeat; margin:0;">
+  {% include "header.html" %}
+  {% block content %}
+  <main class="about_main" >
+      <center><h1>OUR TEAM</h1></center>
+      <section>
+        {% for i in about_us %}
+            <article>
+                  <img src="{{i.image_per.url}}" alt="card image" width="350" height="460" />
+                  <h2>{{i.person}}</h2>
+                  <h3>{{i.about_person}}</h3>
+            </article>
+        {% endfor %}
+      </section>
+    </main>
+  {% endblock %}
+  </body>
+</html>

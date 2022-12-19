@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+
+    <link rel="stylesheet" href="{% static 'css/header.css' %}"/>
+
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li class="li_nav"><a href="/main_page/">Main</a></li>
+<!--            <li class="li_nav"><a href="/register/">Account</a></li>-->
+            <li class="li_nav"><a href="/about_us">About us</a></li>
+        </ul>
+    </nav>
+</header>
+</body>
+</html>
+{% block content %}{% endblock %}

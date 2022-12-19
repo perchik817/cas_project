@@ -1,0 +1,41 @@
+*{
+      margin: 0;
+}
+
+
+form{
+width: 50%;
+margin: 0 auto';
+}
+
+.cont_form{
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      line-height: 1.5;
+      color: black;
+      padding-top: 90px;
+      margin: 0 auto;
+}
+
+.cont_form input{
+      width: 500px;
+      padding: 18px 20px;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid black;
+      margin: 10px 0;
+}
+
+
+p{
+      font-size: 25px;
+}
+
+.sub{
+      background-color: #ee6aff;
+      color:white;
+      font-size: 20px;
+      font-weight: 400;
+      border: 1px solid #ee6aff;
+}

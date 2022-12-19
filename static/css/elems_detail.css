@@ -1,0 +1,125 @@
+* {
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    main {
+      padding-top: 40px;
+      background-color: rgba(82, 82, 82, 0.708);
+      width: 100%;
+    }
+    
+    .sect1 {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .img_sect1 {
+      width: calc(100% - 370px);
+      height: 500px !important;
+    }
+    
+    .sect1 img {
+      width: 800px;
+      height: 600px;
+      padding-left: 20px;
+      padding-top: 40px;
+    }
+    
+    .column1 {
+      padding-top: 50px;
+      width: 500px;
+      height: 705px;
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      background-color: #000;
+    }
+    
+    .column1 h3 {
+      font-size: 24px;
+      line-height: 1.5;
+      font-weight: 400;
+      color: #ee6aff;
+    }
+    
+    .fav_btn {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      width: 100%;
+    
+      margin: 15px 0;
+    }
+    
+    .fav_btn p b {
+      color: white;
+      font-size: 20px;
+    }
+    
+    .fav_btn button {
+      padding: 10px 15px;
+      font-family: RazerF5, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      background: #e984f6;
+      color: #000;
+      margin: 0;
+      padding: 0 20px;
+      height: 40px;
+      text-transform: uppercase;
+      border-radius: 2px;
+      border: none;
+      -webkit-transition: 0.25s;
+      -o-transition: 0.25s;
+      transition: 0.25s;
+      cursor: pointer;
+      text-decoration: none;
+      outline: none;
+      text-align: center;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    .fav_btn button a{
+      text-decoration: none;
+    }
+
+    .p {
+      width: 500px;
+      max-width: 100%;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.4;
+      margin: 15px 0;
+      color: rgb(159, 159, 160);
+    }
+    
+    .p span {
+      color: white;
+    }
+    
+    .list {
+      display: flex;
+      align-items: center;
+      justify-content: stretch;
+      gap: 10px;
+      align-content: center;
+      margin: 10px 0;
+    }
+    
+    .list p {
+      font: 20px;
+      color: white;
+    }

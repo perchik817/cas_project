@@ -1,0 +1,41 @@
+.about_main {
+  width: 100%;
+  height: 100vh;
+  color: white;
+}
+
+h1{
+  font-size: 50px;
+}
+
+.about_main section {
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about_main section article {
+  padding: 15px 8px;
+  border-radius: 5px;
+  height: 600px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  background-color: black;
+}
+
+.about_main section article img{
+  border-radius: 10px;
+}
+
+.about_main section article h2 {
+  font-size: 25px;
+  color: white;
+}

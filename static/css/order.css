@@ -1,0 +1,26 @@
+section{
+      /* width: 90%; */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0px auto;
+      padding-top: 34px;
+      color: white;
+}
+
+.section_inner{
+      background-color: rgba(0, 0, 0, 0.488);
+      width: 600px;
+      height: 220px;
+      padding: 40px 170px;
+}
+
+hr{
+      width: 300px;
+      margin: 13px 0;
+      color: #130237;
+}
+
+p{
+      font-size: 20px;
+}

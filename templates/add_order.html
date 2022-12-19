@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{% static 'css/add_order.css' %}" />
+    <title>Order</title>
+  </head>
+  <body>
+    {% include "header.html" %} {% block content %}
+    <div class="cont_form">
+      <form action="/add_order/" method="post" enctype="multipart/form-data">
+        {% csrf_token %} {{form.as_p}}
+        <input type="submit" value="Add Order" class="sub"/>
+      </form>
+    </div>
+    {% endblock %}
+  </body>
+</html>

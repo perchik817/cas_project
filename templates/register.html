@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<link crossorigin = "anonymous" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	      integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	      rel = "stylesheet">
+	<title>Title</title>
+</head>
+<body>
+{% extends "header.html" %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<div class="main_cont" style = "padding-top: 100px; background-image: url('../static/images/sign_up_back.jpg');
+width: 100%; height:900px; background-size: cover; background-repeat: no-repeat;">
+	<div class = "container" style="background-color: rgba(0, 0, 0, 0.629); height: 700px; padding: 30px;">
+		<h1>Register</h1>
+		<form method = "POST">
+			{% csrf_token %}
+			{{ register_form|crispy }}
+			<button class = "btn btn-primary" type = "submit" style="margin-top: 20px; font-size: 20px; padding: 5px 19px; background-color: #e629ff; border: 1px solid #e629ff;">Register</button>
+		</form>
+		<p class = "text-center" style="padding-top: 20px;">If you already have an account, <a href = "/login">login</a> instead.</p>
+	</div>
+</div>
+
+{% endblock %}
+</body>
+</html>

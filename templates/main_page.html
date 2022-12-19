@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8"/>
+	<link rel = "stylesheet" href = "{% static 'css/main_page.css' %}"/>
+	<link rel = "stylesheet" href = "{% static 'css/header.css' %}">
+	<title>CAS</title>
+</head>
+<body>
+
+<header>
+	<nav>
+		<ul>
+			<div class = "dropdown">
+				<li class = "drop_cont">
+					<a href = "#">Main</a></li>
+				<div class = "dropdown-content">
+					<li><a href = "#keyboards_mice">Keyboards & mice</a></li>
+					<li><a href = "#audio_video">Audio & video accessories</a></li>
+					<li><a href = "#cables_intercons">Cables & interconnects</a></li>
+					<li><a href = "#gaming">Game hardware</a></li>
+				</div>
+			</div>
+			<!-- <li class = "li_nav"><a href = "/register/">Account</a></li> -->
+			<li class = "li_nav"><a href = "/about_us">About us</a></li>
+		</ul>
+		
+	</nav>
+</header>
+
+<main>
+	{% block content %}
+	<section class = "first">
+		<img
+				src = "../static/images/background_main_page.webp"
+				alt = "background"
+				width = "100%"
+				height = "520"
+		/>
+		<div class = "back"></div>
+		<div class = "text">
+			<h1>CYBER FRENZY UNLEASHED</h1>
+		</div>
+	</section>
+	
+	<section class = "second">
+		<h2 id = "gaming">Game hardware</h2>
+		<div class = "card_cont">
+			{% for n in elems_4 %}
+			<article>
+				<div>
+					<img src = "{{n.img_4.url}}" alt = "this is a" width = "350" height = "175" padding = "10"/>
+					<h3>{{n.title_4}}</h3>
+					<p class = "des">{{n.description_4}}</p>
+					<span>
+		                <p>US${{n.price_4}}</p>
+		                <button><a href = "/elems_4_detail/{{n.id}}">More</a></button>
+					</span>
+				</div>
+			</article>
+			{% endfor %}
+		</div>
+	</section>
+	
+	<section class = "second">
+		<h2 id = "audio_video">audio & video accessories</h2>
+		<div class = "card_cont">
+			{% for j in elems_2 %}
+			<article>
+				<div>
+					<img src = "{{j.img_2.url}}" alt = "this is a" width = "350" height = "175"/>
+					<h3>{{j.title_2}}</h3>
+					<p class = "des">{{j.description_2}}</p>
+					<span>
+                        <p>US${{j.price_2}}</p>
+						<button><a href = "/elems_2_detail/{{j.id}}">More</a></button>
+                    </span>
+				</div>
+			</article>
+			{%endfor%}
+		</div>
+	</section>
+	
+	<section style="width: 100%; height:100px; background-color:rgb(34, 33, 33);"></section>
+	<section class = "third"  style=" background-image: url('../static/images/color-smoke-abstract-wallpaper-aesthetic-background-design.jpg');">
+		<div>
+			<h1>Swift shopping is possible and easy</h1>
+			<a href = "#" class = "try"> Try now ></a>
+		</div>
+	</section>
+	
+	<section class = "second">
+		<h2 id = "keyboards_mice">Keyboards & mice</h2>
+		<div class = "card_cont">
+			{% for i in elems_1 %}
+			<article>
+				<div>
+					<img src = "{{i.img.url}}" alt = "image" width = "350" height = "175">
+					<h3>{{i.title}}</h3>
+					<p class = "des">{{i.description}}</p>
+					<span>
+		                <p>US${{i.price}}</p>
+		                <button><a href = "/elems_1_detail/{{i.id}}">More</a></button>
+					</span>
+				</div>
+			</article>
+			{% endfor %}
+		</div>
+	</section>
+	
+	<section class = "second">
+		<h2 id = "cables_intercons">Cables & interconnects</h2>
+		<div class = "card_cont">
+			{% for q in elems_3 %}
+			<article>
+				<div>
+					<img src = "{{q.img_3.url}}" alt = "this is a" width = "350" height = "175" padding = "10"/>
+					<h3>{{q.title_3}}</h3>
+					<p class = "des">{{q.description_3}}</p>
+					<span>
+		                <p>US${{q.price_3}}</p>
+						<button><a href = "/elems_3_detail/{{q.id}}">More</a></button>
+					</span>
+				</div>
+			</article>
+			{% endfor %}
+		</div>
+	</section>
+	
+</main>
+</body>
+</html>
+{% endblock %}
